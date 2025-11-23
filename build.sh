@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <RiSP/RiU/RiC/RiWC/RiKN/RiKwA>"
+    exit 1
+fi
+
 SCRIPTS_DIR=$(realpath "./scripts/$1")
 TMP_DIR=$(realpath -m "./build/tmp/")
 CACHE_DIR=$(realpath -m "./build/cache/")
