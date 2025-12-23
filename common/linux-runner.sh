@@ -23,7 +23,7 @@ if ! command -v wine >/dev/null 2>&1; then
     exit 1
 fi
 
-files=("ReksioPiraci.exe" "ReksioUfo.exe" "Czarodzieje.exe" "Wehikul.exe" "Nemo.exe" "Rex5.exe")
+files=("ReksioPiraci.exe" "ReksioUfo.exe" "Czarodzieje.exe" "Wehikul.exe" "nemo.exe" "Rex5.exe")
 
 for file in "${files[@]}"; do
     if [[ -f "$file" ]]; then
