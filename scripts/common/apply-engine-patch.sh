@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+ENGINE_FILENAME="$1"
+PATCH_PATH="$2"
+
+unzip -j -o "$TARGET_ZIP" "$ENGINE_FILENAME" -d "$TMP_DIR"
+"$COMMON_SCRIPTS_DIR/apply-bin-patch.py" "$TMP_DIR/$ENGINE_FILENAME" "$PATCH_PATH"
+zip -j "$TARGET_ZIP" "$TMP_DIR/$ENGINE_FILENAME"
