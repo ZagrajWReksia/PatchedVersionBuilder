@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
 
-wget -nc -O "$CACHE_DIR/ric-workshop-0.2.0.zip" 'https://github.com/ZagrajWReksia/ric-workshop/releases/download/0.2.0/ric-workshop-0.2.0.zip' || echo "Already downloaded"
-zipmerge -I "$TARGET_ZIP" "$TARGET_ZIP" "$CACHE_DIR/ric-workshop-0.2.0.zip"
+version="0.3.0"
+
+wget -nc -O "$CACHE_DIR/ric-workshop-$version.zip" "https://github.com/ZagrajWReksia/ric-workshop/releases/download/$version/ric-workshop-$version.zip" || echo "Already downloaded"
+zipmerge -I "$TARGET_ZIP" "$TARGET_ZIP" "$CACHE_DIR/ric-workshop-$version.zip"
