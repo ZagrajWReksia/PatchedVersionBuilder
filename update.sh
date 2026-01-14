@@ -2,7 +2,7 @@
 set -e
 
 GAME="$1"
-BUCKET_NAME="$1"
+BUCKET_NAME="$2"
 
 zip_filename="build/dist/$GAME-Patched.zip"
 if [[ -f "$zip_filename" ]]; then
